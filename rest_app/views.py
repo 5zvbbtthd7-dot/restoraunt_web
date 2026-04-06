@@ -3,7 +3,7 @@ from .models import Dish
 
 def home(request):
     dishes = Dish.objects.all()[:6]
-    return render(request, 'home.html', {'dishes': dishes})
+    return render(request, 'index.html', {'dishes': dishes})
 
 def menu(request):
     dishes = Dish.objects.all()
